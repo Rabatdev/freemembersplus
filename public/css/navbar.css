@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600&amp;display=swap");
+
+:root {
+    --navbar-bg: #202225;
+    --navbar-panel-hover-bg: rgba(79, 84, 92, 0.6);
+    --navbar-text-color: #dcddde;
+    --theme-color: #5865f2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar guilds */
+.navbar {
+    font-family: "Open Sans", sans-serif;
+    position: fixed;
+    overflow: hidden scroll;
+    top: 0;
+    bottom: 0;
+    /*width: 100%;
+    min-width: 72px;*/
+    width: 72px;
+    user-select: none;
+}
+
+.navbar::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 1500px) {
+    .navbar {
+        display: none
+    }
+
+    .app {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+};

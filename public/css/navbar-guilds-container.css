@@ -1,0 +1,142 @@
+/* Guild container */
+.navbar .guilds-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    background: var(--navbar-bg);
+    width: 72px;
+    height: fit-content;
+    min-height: 100vh;
+}
+
+/* Divider */
+.navbar .guilds-container .divider {
+    width: 32px;
+    height: 2px;
+    border: none;
+    background: #36393f;
+    margin: 8px 0;
+    border-radius: 196px;
+}
+
+/* Item */
+.navbar .guilds-container .item {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #36393f;
+    position: relative;
+    transition: border-radius 250ms, background 250ms;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.navbar .guilds-container .item:hover,
+.navbar .guilds-container .item.active {
+    border-radius: 16px;
+    background: var(--theme-color);
+}
+
+.navbar .guilds-container .item .icon svg {
+    color: #fff;
+    transition: color 250ms;
+}
+
+.navbar .guilds-container .item::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 0;
+    border-radius: 200px;
+    background: #fff;
+    position: absolute;
+    right: 57px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: height 250ms;
+}
+
+/* Item green */
+.navbar .guilds-container .item.green .icon svg {
+    color: #3ba55c;
+}
+
+.navbar .guilds-container .item.green:hover,
+.navbar .guilds-container .item.green.active {
+    background: #3ba55c;
+}
+
+.navbar .guilds-container .item.green:hover .icon svg,
+.navbar .guilds-container .item.green.active .icon svg {
+    color: #fff;
+}
+
+/* Notify */
+.navbar .guilds-container .item:hover::after {
+    height: 18px;
+}
+
+.navbar .guilds-container .item.notif::after {
+    height: 8px;
+}
+
+.navbar .guilds-container .item.active::after {
+    height: 32px;
+}
+
+
+/* Tooltip */
+.navbar .guilds-container .item .tooltip {
+    font-family: sans-serif;
+    color: var(--navbar-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 12px;
+    margin-left: 10px;
+    border-radius: 8px;
+    display: none;
+    width: max-content;
+    background: var(--navbar-bg);
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*.navbar .guilds-container .item:hover .tooltip {
+    display: block;
+}
+
+.navbar .guilds-container .item .tooltip::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid var(--navbar-bg);
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+}*/
+
+/* Item page */
+.navbar .guilds-container .item.page {
+    margin: 8px 0 0 0;
+}
+
+/* Icon item */
+.navbar .guilds-container .item .icon {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    border-radius: inherit;
+    color: var(--navbar-text-color);
+    font-weight: 500;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
